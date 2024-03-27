@@ -1,6 +1,6 @@
 plugins {
     kotlin("multiplatform")
-    kotlin("native.cocoapods")
+    //kotlin("native.cocoapods")
     id("com.android.library")
     id("org.jetbrains.compose")
     id("dev.icerock.mobile.multiplatform-resources")
@@ -14,6 +14,7 @@ kotlin {
             }
         }
     }
+    /*
 
     listOf(iosX64(),
         iosArm64(),
@@ -33,7 +34,7 @@ kotlin {
             isStatic = true
         }
     }
-    
+    */
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -61,6 +62,7 @@ kotlin {
             }
         }
         val androidUnitTest by getting
+        /*
         val iosX64Main by getting
         val iosArm64Main by getting
         val iosSimulatorArm64Main by getting
@@ -79,6 +81,8 @@ kotlin {
             iosArm64Test.dependsOn(this)
             iosSimulatorArm64Test.dependsOn(this)
         }
+
+         */
     }
 }
 

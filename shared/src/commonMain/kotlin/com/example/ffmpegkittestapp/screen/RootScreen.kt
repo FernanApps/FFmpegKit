@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import com.example.ffmpegkit.FFmpegKitConfig
 import com.example.ffmpegkittestapp.logic.CommandLogic
 import com.example.ffmpegkittestapp.logic.HttpsLogic
 import com.example.ffmpegkittestapp.logic.TranscodeLogic
@@ -27,6 +28,13 @@ internal fun RootScreen(baseDirectory: String) {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colors.background
         ) {
+
+            Column {
+                Text(text = FFmpegKitConfig.getVersion())
+                Text(text = FFmpegKitConfig.getFFmpegVersion())
+            }
+
+            return@Surface
             Scaffold {
                 Column(modifier = Modifier.fillMaxSize()) {
                     Box(modifier = Modifier.weight(1f)) {
